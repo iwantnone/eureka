@@ -5,6 +5,8 @@
     <file url="file://$PROJECT_DIR$/eureka-client/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eureka-commons/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eureka-commons/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gateway-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gateway-server/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/server-center/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/server-center/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />

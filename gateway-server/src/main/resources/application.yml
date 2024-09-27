@@ -1,0 +1,23 @@
+server:
+  port: 9999
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+spring:
+  application:
+    name: cloud-gateway
+  cloud: # spring cloud相关配置的常用前缀
+    gateway: # 网关技术配置前缀
+      discovery: # 自动发现工具
+        locator: # 本地逻辑
+          enabled: true # 开启自动发现工具的本地路由逻辑
+          lower-case-service-id: true # 把从EurekaServer上发现的服务名称，转换成全小写
+      routes:
+        - id: r1
+          uri: lb://order-service
+          predicates:
+            - Path=/order/**
+          filters:
+            - StripPrefix=1
