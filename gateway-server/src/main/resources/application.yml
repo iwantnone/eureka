@@ -21,3 +21,11 @@ spring:
             - Path=/order/**
           filters:
             - StripPrefix=1
+            - name: RequestRateLimiter
+              args:
+                keyResolver: '#{@limitKeyResolver}' # 表达式， #{} 从容器找对象， @beanId
+                redis-rate-limiter.replenishRate: 1 # 每秒令牌生成速率
+                redis-rate-limiter.burstCapacity: 2 # 令牌桶容量上限
+  redis:
+    host: 127.0.0.1
+    port: 6379
