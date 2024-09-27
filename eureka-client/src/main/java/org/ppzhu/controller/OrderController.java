@@ -2,6 +2,7 @@ package org.ppzhu.controller;
 
 import org.ppzhu.feign.UserFeign;
 import org.ppzhu.pojo.AjaxResult;
+import org.ppzhu.pojo.User;
 import org.ppzhu.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -32,8 +33,8 @@ public class OrderController {
     @GetMapping
     public AjaxResult addOrder(){
 
-        orderService.addOrder("6a54faa8-a830-4ac4-a205-da9437f286f4");
-        return AjaxResult.success("success");
+        User user = orderService.addOrder("6a54faa8-a830-4ac4-a205-da9437f286f4");
+        return AjaxResult.success(user);
     }
 
     @GetMapping("/openfeign")

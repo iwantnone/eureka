@@ -1,10 +1,15 @@
 server:
   port: 8888
-
 spring:
   application:
     name: order-service
+  redis:
+    host: 127.0.0.1
+    port: 6379
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
+logging:
+  level:
+    org.springframework: debug

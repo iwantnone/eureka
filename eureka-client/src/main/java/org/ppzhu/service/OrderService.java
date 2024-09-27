@@ -16,5 +16,5 @@ import org.ppzhu.pojo.User;
  */
 
 public interface OrderService {
-    boolean addOrder(String uid);
+    User addOrder(String uid);
 }
